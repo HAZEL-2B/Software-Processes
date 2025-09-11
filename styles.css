@@ -1,0 +1,50 @@
+
+@font-face{
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat.ttf'),
+    url();
+}
+
+footer {
+    background-color: #00cec9 ;  
+    color: #1a3c42;  
+    padding: 15px 0;  
+    text-align: center;  
+    font-family: 'Montserrat';  
+    margin-top: 50px; 
+    margin-bottom: 25px; 
+    border-radius: 70px;
+    border-style: double;
+}
+
+footer .team-members {
+    margin-bottom: 30px;  
+    font-size: 30px;
+    font-style: normal;
+}
+
+footer h2 {
+    font-size: 40px;
+    font-weight: bolder;
+    margin-bottom: 15px;  
+}
+
+footer ul {
+    list-style: none;  
+    padding: 20px;  
+}
+
+footer ul li {
+    font-size: 20px; 
+    font-weight: bold; 
+    margin: 15px 0;  
+}
+
+footer .copyright {
+    font-size: 16px;  
+    margin-top: 30px;  
+}
+
+footer p {
+    font-style: normal;  
+}
