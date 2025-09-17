@@ -1,50 +1,169 @@
 
-@font-face{
-    font-family: 'Montserrat';
-    src: url('fonts/Montserrat.ttf'),
-    url();
+:root {
+    --color-primary: #FFB6C1;   
+    --color-secondary: #FFDAB9; 
+    --color-tertiary: #B0E0E6;  
+    --color-quaternary: #07131d; 
+    --color-quinary: #FFFFFF;  
+
+    
+
+   
+    --spacing-small: 10px;
+    --spacing-medium: 20px;
+    --border-main: 2px dashed var(--color-tertiary);
+    --border-heading: 3px solid var(--color-quaternary);
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('Montserrat.ttf');
+}
+
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-quaternary);
+    background-color: var(--color-tertiary);
+    margin: 5px;
+    padding: 10px;
+}
+
+
+header {
+    background-color: var(--color-quinary);
+    padding: var(--spacing-medium);
+    border-bottom: var(--border-heading);
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+header section {
+    margin-bottom: var(--spacing-small); 
+}
+
+header section a {
+    text-decoration: none;
+    color: var(--color-quaternary);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+header section img {
+    margin-right: var(--spacing-small);
+    width: 40px;
+    height: 40px;
+}
+
+header section:nth-of-type(2) {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+
+header section button {
+    background-color: var(--color-primary);
+    color: var(--color-quaternary);
+    border: var(--border-main);
+    padding: var(--spacing-small) var(--spacing-medium);
+    margin: var(--spacing-small) 5px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-family: var(--font-body);
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+header section button a {
+    color: var(--color-quaternary);
+    text-decoration: none;
+}
+
+header section button:hover {
+    background-color: var(--color-secondary);
+    transform: scale(1.05);
+}
+
+
+main {
+    max-width: 1000px;
+    margin: var(--spacing-medium) auto;
+    text-align: justify;
+    padding: var(--spacing-medium);
+    background-color: var(--color-quinary);
+    border: var(--border-main);
+    border-radius: 15px;
+    box-shadow: var(--box-shadow);
+}
+
+h1, h4, h5 {
+    font-family: var(--font-heading);
+    color: var(--color-quaternary);
+    text-align: left;
+}
+h3 {
+    font-family: var(--font-heading);
+    color: var(--color-quaternary);
+    text-align: center;
+    text-size-adjust: auto;
+    text-transform: uppercase;
+}
+h1 {
+    font-size: 3em;
+    padding-bottom: var(--spacing-small);
+    border-bottom: var(--border-heading);
+    margin-bottom: var(--spacing-medium);
+    text-align: center;
+}
+
+p, li {
+    line-height: 1.6;
+    margin-bottom: var(--spacing-small);
+}
+
+img {
+    border: var(--border-main);
+    border-radius: 10px;
+    padding: 5px;
+    background-color: var(--color-quinary);
+    margin: var(--spacing-medium) auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+ol {
+    margin: 5px 0;
+    padding-left: 25px;
+}
+
+ol li {
+    margin-bottom: var(--spacing-small);
+}
+
 
 footer {
-    background-color: #00cec9 ;  
-    color: #1a3c42;  
-    padding: 15px 0;  
-    text-align: center;  
-    font-family: 'Montserrat';  
-    margin-top: 50px; 
-    margin-bottom: 25px; 
-    border-radius: 70px;
-    border-style: double;
+    background-color: var(--color-secondary);
+    color: var(--color-quaternary);
+    text-align: center;
+    padding: var(--spacing-medium);
+    margin-top: var(--spacing-medium);
 }
 
-footer .team-members {
-    margin-bottom: 30px;  
-    font-size: 30px;
-    font-style: normal;
+.team-members ul {
+    list-style: none;
+    padding: 10px;
 }
 
-footer h2 {
-    font-size: 40px;
-    font-weight: bolder;
-    margin-bottom: 15px;  
+.team-members li {
+    display: inline-block;
+    margin: 5px var(--spacing-small);
+    font-weight: bold;
 }
 
-footer ul {
-    list-style: none;  
-    padding: 20px;  
-}
-
-footer ul li {
-    font-size: 20px; 
-    font-weight: bold; 
-    margin: 15px 0;  
-}
-
-footer .copyright {
-    font-size: 16px;  
-    margin-top: 30px;  
-}
-
-footer p {
-    font-style: normal;  
+.copyright p {
+    margin: 5px;
 }
